@@ -14,6 +14,11 @@ form.addEventListener("submit", function (e) {
 
   if (userInput === "") {
     paragraph.innerHTML = "Input your Number";
+  } else if (isNaN(userInput)){
+    paragraph.innerHTML = "Input Numbers only!"
+
+  } else if (userInput <=0 ){
+    paragraph.innerHTML = "Input a valid number"
   } else {
     let result = toFahrenheit(userInput);
     paragraph.innerHTML = `conversion of ${userInput} celcius to Fahrenheit is ${result}`;
